@@ -41,21 +41,37 @@
             .icon {
                 margin:0px 15px;
                 cursor: pointer;
+                font-size: 28px;
             }
             
             img {
-                width: 30px;
-                height: 30px;
+                width: 35px;
+                height: 35px;
                 border-radius: 5px;
                 object-fit: cover;
                 cursor: pointer;
             }
 
+            
             .profile {
+
+                .dropdownIcon {
+                    font-size: 24px;
+                    margin-left: 3px;
+
+                }
+
                 .options{
                     display: none;
                     background-color: var(--main-color);
                     border-radius: 5px;
+                }
+                
+                .optionIcon {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 5px;
+                    cursor: pointer;
                 }
 
                 span {
@@ -64,10 +80,28 @@
                 }
 
                 &:hover {
+                    .dropdownIcon {
+                        transform: rotate(180deg);
+                        animation: roll;
+                        animation-duration: 0.5s;
+                    }
+
+                    @keyframes roll {
+
+                        0% {
+                            transform: rotate(0);
+                        }
+                        100% {
+                            transform: rotate(180deg);
+                        }
+                    }
+
                     .options {
                         display: flex;
                         flex-direction: column;
                         position: absolute;
+                        right: 50px;
+                        padding-top: 20px;
                     }
                 }
             }

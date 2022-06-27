@@ -1,4 +1,4 @@
-import { Search, Notifications, ArrowDropDown } from "@mui/icons-material"
+import { Search, Notifications, ArrowDropDown, PermIdentity, Settings } from "@mui/icons-material"
 import { useState } from "react"
 import "./navbar.scss"
 const Navbar = () => {
@@ -18,25 +18,31 @@ const Navbar = () => {
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"  
                     alt=""
                 />
-                <span>Homepage</span>
-                <span>Series</span>
+                <span>Home</span>
+                <span>TV Shows</span>
                 <span>Movies</span>
-                <span>Recent and Popular</span>
+                <span>New and Popular</span>
                 <span>My List</span>
             </div>
             <div className="right">
                 <Search  className="icon"/>
-                <span>KID</span>
                 <Notifications className="icon"/>
                 <img
-                    src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    src="https://images.pexels.com/photos/106685/pexels-photo-106685.jpeg?cs=srgb&dl=pexels-mark-broadhurst-106685.jpg&fm=jpg"
                     alt=""
                 />
                 <div className="profile">
-                    <ArrowDropDown className="icon"/>
+                    <ArrowDropDown className="icon dropdownIcon"/>
                     <div className="options">
-                        <span>Setting</span>
-                        <span>Logout</span>
+                        <div className="optionIcon ">
+                            <PermIdentity/>
+                            <span>Account</span>
+                        </div>
+                        <div className="optionIcon">
+                            <Settings/>
+                            <span>Setting</span>
+                        </div>
+                        <span>Sign out of Netflix</span>
                     </div>
                 </div>
             </div>
