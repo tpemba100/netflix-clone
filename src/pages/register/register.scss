@@ -29,8 +29,10 @@
                 padding: 5px 15px;
                 font-size: 16px;
                 font-weight: 500;
-                position: cursor;
+                cursor: pointer;
             }
+
+           
         }
     }
 
@@ -83,6 +85,22 @@
                 color: white;
                 font-size: 22px;
                 cursor: pointer;
+            }
+
+            .login-register {
+                .registerButton {
+                    // flex: 3;
+                    padding: 11px 75px;
+                    height: 100%;
+                    background-color: red;
+                    border: none;
+                    color: white;
+                    font-size: 22px;
+                    cursor: pointer;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                }
             }
         }
 

@@ -1,13 +1,16 @@
 import { ArrowBackOutlined } from "@mui/icons-material"
+import { Link } from "react-router-dom"
 import "./watch.scss"
 
 export default function Watch() {
   return (
     <div className="watch">
+        <Link to="/home">
         <div className="back">
             <ArrowBackOutlined className="backButton"/>
             Home
         </div>
+        </Link>
         <video
             className="video"
             autoPlay

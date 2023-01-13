@@ -1,5 +1,6 @@
 import { Search, Notifications, ArrowDropDown, PermIdentity, Settings } from "@mui/icons-material"
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import "./navbar.scss"
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +43,11 @@ const Navbar = () => {
                             <Settings/>
                             <span>Setting</span>
                         </div>
-                        <span>Sign out of Netflix</span>
+                        <Link to="/" >
+                            <div>
+                            <span className="signout">Sign out of Netflix</span>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

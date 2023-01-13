@@ -9,10 +9,10 @@ const Home = () => {
     <div className="home">
       <Navbar />
       <Featured />
-      <List/>
-      <List/>
-      <List/>
-      <List/>
+      <List title="Continue to Watch" />
+      <List title="Trending Now" />
+      <List title="Recetly Added " />
+      <List title="K-Drama " />
     </div>
   )
 }
