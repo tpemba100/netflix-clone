@@ -12,7 +12,7 @@ A Front End Client View of NETFLIX app with very similar interface and experienc
 
 ## User Flow
 
-![](media/netflix-mockup.gif)
+![](client/media/netflix-mockup.gif)
 
 ## Technologies
 
