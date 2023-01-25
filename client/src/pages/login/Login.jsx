@@ -19,7 +19,7 @@ export default function Login() {
                 <h1>Sign In</h1>
                 <input type="email" placeholder="Email or phone number" />
                 <input type="password" placeholder="Password" />
-                <Link to="/home">
+                <Link to="/home" className="link">
                 <button 
                     className="loginButton"
                     >Sign In
@@ -27,7 +27,7 @@ export default function Login() {
                 </Link>
                 <span>
                     New to Netflix? 
-                    <Link to="/register">
+                    <Link to="/register" className="link">
                     <b>Sign up now.</b>
                     </Link>
                 </span>

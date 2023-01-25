@@ -4,17 +4,17 @@ import "./home.scss"
 import List from "../../components/list/List"
 
 
-const Home = () => {
+const Home = ({type}) => {
   return (
     <div className="home">
       <Navbar />
-      <Featured />
+      <Featured type={type} />
       <List title="Continue to Watch" />
       <List title="Trending Now" />
-      <List title="Recetly Added " />
-      <List title="K-Drama " />
+      <List title="Recetly Added" />
+      <List title="K-Drama" />
     </div>
   )
 }
 
-export default Home
+export default Home;
