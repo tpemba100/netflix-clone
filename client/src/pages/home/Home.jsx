@@ -13,16 +13,8 @@ const Home = ({type}) => {
   const [lists, setLists] = useState([])
   const [genre, setGenre] = useState(null)
   
-  // `lists
-  //         ${type ? "?type=" + type : ""}${
-  //           genre ? "&genre=" + genre : ""
-  //         }`
-  
+  // `lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`
   // `/lists?type=series&genre=action`, 
-
-  // headers:{
-  //   token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyMDgwZDA2YjMwMmI1MjdiYjdlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NDk0MDM1OSwiZXhwIjoxNjc1MzcyMzU5fQ.LIf7sjs-NXGtgNAvwVc3Zyd3cKWjpcwd5lxt0aeEy5U"
-  // }
 
   useEffect(() => {
     const getRandomLists = async () => {
@@ -34,8 +26,8 @@ const Home = ({type}) => {
             }
           },
         );
-        console.log(res)
-        // setLists(res.data);
+        console.log(res.data)
+        setLists(res.data);
       } catch (err) {
         console.log(err);
       }
@@ -50,10 +42,9 @@ const Home = ({type}) => {
     <div className="home">
       <Navbar />
       <Featured type={type} />
-      <List title="Continue to Watch" />
-      <List title="Trending Now" />
-      <List title="Recetly Added" />
-      <List title="K-Drama" />
+      {lists.map((list) => (
+        <List list={list} />
+      ))}
     </div>
   )
 }

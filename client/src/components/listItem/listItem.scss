@@ -6,7 +6,8 @@
     overflow: hidden;
     cursor: pointer;
     color: white;
-
+    
+   
     img {
         width: 100%;
         height: 100%;
@@ -36,11 +37,20 @@
         img {
             height: 140px;
         }
+        
+        
+        
 
+          
         .itemInfo {
             display: flex;
             flex-direction: column;
             padding: 5px;
+
+            .link {
+                color: inherit;
+                text-decoration: none;
+              
 
             .icons {
                 display: flex;
@@ -89,6 +99,7 @@
             .genre {
                font-size: 14px;
                color: lightgray; 
+            }
             }
         }   
     }
