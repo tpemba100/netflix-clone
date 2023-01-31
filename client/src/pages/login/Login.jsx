@@ -19,7 +19,7 @@ export default function Login() {
                 <h1>Sign In</h1>
                 <input type="email" placeholder="Email or phone number" />
                 <input type="password" placeholder="Password" />
-                <Link to="/home" className="link">
+                <Link to="/" className="link">
                 <button 
                     className="loginButton"
                     >Sign In

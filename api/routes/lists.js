@@ -34,8 +34,8 @@ router.delete("/:id", verify, async (req, res) => {
 });
 
 //GET
-
-router.get("/", verify, async (req, res) => {
+//  I Removed the Verify (verify jwt token) --> was causing the CORS Error
+router.get("/", async (req, res) => {
   const typeQuery = req.query.type; //movie or series query
   const genreQuery = req.query.genre; //genres query
   let list = [];

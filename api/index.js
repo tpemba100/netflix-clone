@@ -29,5 +29,3 @@ app.use("/api/lists", listRoute);
 app.listen(8800, () => {
   console.log("Backend server is running!");
 });
-
-// https://www.youtube.com/watch?v=tsNswx0nRKM&list=PLvPOPuC4EMAfHYMtgXN8oLk6CfURNlZmq&index=5&t=804s
