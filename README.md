@@ -1,6 +1,6 @@
 # Netflix-Clone
 
-###*In Development Phase*
+### *In Development Phase*
 
 
 A Front End Client View of NETFLIX app with very similar interface and experience. The Front end was developed using React, SCSS and Material UI for similar User Experience as original Netflix. And the back end is in progress...
