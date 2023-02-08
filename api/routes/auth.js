@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
+
 // the Register
 router.post("/register", async (req, res) => {
   const newUser = new User({

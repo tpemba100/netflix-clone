@@ -80,7 +80,7 @@ router.get("/", verify, async (req, res) => {
   } else {
     res
       .status(403)
-      .json("You are not Admin, you are not allowed to see al users!");
+      .json("You are not Admin, you are not allowed to see all users!");
   }
 });
 

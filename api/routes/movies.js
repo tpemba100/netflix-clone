@@ -58,8 +58,8 @@ router.delete("/:id", verify, async (req, res) => {
 });
 
 //  GET
-// Needed to get rid
-router.get("/find/:id", verify, async (req, res) => {
+//  I Removed the Verify (verify jwt token) --> was causing the CORS & Proxy Error\
+router.get("/find/:id", async (req, res) => {
   try {
     const movie = await Movie.findById(req.params.id);
     res.status(201).json(movie);
@@ -69,7 +69,8 @@ router.get("/find/:id", verify, async (req, res) => {
 });
 
 //  GET RANDOM
-router.get("/random", verify, async (req, res) => {
+//  I Removed the Verify (verify jwt token) --> was causing the CORS & Proxy Error
+router.get("/random", async (req, res) => {
   const type = req.query.type;
   let movie;
   try {

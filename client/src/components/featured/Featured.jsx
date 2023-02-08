@@ -11,10 +11,10 @@ export default function Featured({ type }) {
     const getRandomContent = async () => {
       try {
         const res = await axios.get(`/api/movies/random?type=movies`, {
-          headers: {
-            token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyMDgwZDA2YjMwMmI1MjdiYjdlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NTE5NTkzOSwiZXhwIjoxNjc1NjI3OTM5fQ.7HV5FvaXt0sepK9sZOcVE_0p6DTnceLUehhna9vLJYI",
-          },
+          // headers: {
+          //   token:
+          //     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyMDgwZDA2YjMwMmI1MjdiYjdlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NTE5NTkzOSwiZXhwIjoxNjc1NjI3OTM5fQ.7HV5FvaXt0sepK9sZOcVE_0p6DTnceLUehhna9vLJYI",
+          // },
         });
         setContent(res.data[0]);
       } catch (err) {
@@ -24,7 +24,7 @@ export default function Featured({ type }) {
     getRandomContent();
   }, [type]);
 
-  console.log(content)
+  // console.log(content)
 
   return (
     <div className="featured">
