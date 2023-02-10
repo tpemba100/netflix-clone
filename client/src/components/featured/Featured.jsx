@@ -54,13 +54,18 @@ export default function Featured({ type }) {
         alt=""
       />
       <div className="info">
-        <img
+        {/* This it suppsoed to be the movie title header */}
+        {/* <img
           // src="https://upload.wikimedia.org/wikipedia/commons/2/23/Johnny_English_Title.png"
-          src={content.imgTitle}
+          // src={content.imgTitle}
+          src={content.img}
           alt=""
-          width="200"
-          height="200"
-        />
+          style={{
+            width:"300px",
+            height:"200px"
+          }}
+        /> */}
+        <h1>{content.title}</h1>
         <span className="desc">{content.desc}</span>
         <div className="buttons">
           <Link to="/watch">
