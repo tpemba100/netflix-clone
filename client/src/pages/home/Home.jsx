@@ -12,6 +12,7 @@ const Home = ({type}) => {
 
   const [lists, setLists] = useState([])
   const [genre, setGenre] = useState(null)
+
   
   // `lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`
   // `/lists?type=series&genre=action`, 

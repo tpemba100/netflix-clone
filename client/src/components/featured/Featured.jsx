@@ -58,6 +58,8 @@ export default function Featured({ type }) {
           // src="https://upload.wikimedia.org/wikipedia/commons/2/23/Johnny_English_Title.png"
           src={content.imgTitle}
           alt=""
+          width="200"
+          height="200"
         />
         <span className="desc">{content.desc}</span>
         <div className="buttons">

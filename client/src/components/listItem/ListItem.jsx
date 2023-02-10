@@ -32,7 +32,6 @@ export default function ListItem({ index, item }) {
     getMovie();
   }, [item]);
 
-  // Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyMDgwZDA2YjMwMmI1MjdiYjdlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NTE5NTkzOSwiZXhwIjoxNjc1NjI3OTM5fQ.7HV5FvaXt0sepK9sZOcVE_0p6DTnceLUehhna9vLJYI
 
   return (
     // <Link to="/watch" className="link">
@@ -44,7 +43,12 @@ export default function ListItem({ index, item }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <img src={movie.img} alt="" />
+        {/* <img 
+          src="https://occ-0-1723-92.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABU7D36jL6KiLG1xI8Xg_cZK-hYQj1L8yRxbQuB0rcLCnAk8AhEK5EM83QI71bRHUm0qOYxonD88gaThgDaPu7NuUfRg.jpg?r=4ee"
+         alt="" 
+        /> */}
+        <img 
+        src={movie.img} alt="" />
         {isHovered && (
           <>
             <video src={movie.trailer} autoPlay={true} loop />
