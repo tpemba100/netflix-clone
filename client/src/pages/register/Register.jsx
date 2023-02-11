@@ -1,24 +1,57 @@
-import { useRef, useState } from "react"
 import "./register.scss"
-import { Link } from 'react-router-dom';
+import { useRef, useState, useEffect } from "react"
+import { Link, useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 
 export default function Register() {
-        const [email, setEmail] = useState("")
-        const [password, setPassword] = useState("")
+        const [email, setEmail] = useState("");
+        const [username, setUsername] = useState("");
+        const [password, setPassword] = useState("");
+        const navigate = useNavigate();
 
-        const emailRef = useRef()
-        const passwordRef = useRef()
+        const emailRef = useRef();
+        const usernameRef = useRef();
+        const passwordRef = useRef();
 
         const handleStart = () => {
             setEmail(emailRef.current.value)
+            // setUsername(emailRef.current.value);
+        };
+        
+        const handleFinish = (e) => {
+            e.preventDefault();
+            
+            setUsername(usernameRef.current.value);   
+            setPassword(passwordRef.current.value);
+                        
+        };
+
+        // used useEffect to make sure the state is updated ASAP
+        // once we setPassword, useEffect rund sue to dependencies changes and re-renders, Then runs axios
+        useEffect(() => {
+            if(password){
+                 doRegister()
+            }
+            // doRegister();
+          }, [username, password]);
+
+        const doRegister = async() => {
+            try {
+                await axios.post("/api/auth/register", { email, username, password });
+                navigate("/login");
+                console.log("SUccess Post")
+                
+            } catch (err) {
+                console.log(err)
+            }
         }
-        const handleFinish = () => {
-            setPassword(passwordRef.current.value)
-        }
-        const handleLogin = () => {
-            return;
-        }
+       
+
+
+
+
+       
     return (
     <div className='register'>
         <div className="top">
@@ -28,7 +61,7 @@ export default function Register() {
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" 
                     alt=""
                 />
-                    <button className='loginButton' onClick={handleLogin} >Sign In</button>
+                    <button className='loginButton' >Sign In</button>
             </div>
         </div>
 
@@ -47,6 +80,7 @@ export default function Register() {
 
             ) : (
                 <form className="input">
+                    <input type="username" placeholder="username" ref={usernameRef}/>
                     <input type="password" placeholder="password" ref={passwordRef}/>
                     <Link to="/home" className="login-register">
                         <button className="registerButton" onClick={handleFinish}>
