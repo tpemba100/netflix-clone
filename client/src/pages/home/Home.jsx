@@ -4,7 +4,7 @@ import "./home.scss"
 import List from "../../components/list/List"
 import { useState, useEffect } from "react";
 import axios from 'axios';
-
+import Footer from "../../components/footer/Footer";
 // const proxyurl = "https://cors-anywhere.herokuapp.com/";
 // const localUrl = "http://localhost:8080/api/"
 
@@ -27,7 +27,7 @@ const Home = ({type}) => {
             }
           },
         );
-        console.log(res.data)
+        // console.log(res.data)
         setLists(res.data);
       } catch (err) {
         console.log(err);
@@ -43,9 +43,10 @@ const Home = ({type}) => {
     <div className="home">
       <Navbar />
       <Featured type={type} />
-      {lists.map((list) => (
-        <List list={list} />
+      {lists.map((list,i) => (
+        <List  list={list}/>
       ))}
+      <Footer />
     </div>
   )
 }

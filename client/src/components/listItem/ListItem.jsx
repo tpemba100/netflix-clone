@@ -18,12 +18,15 @@ export default function ListItem({ index, item }) {
   useEffect(() => {
     const getMovie = async () => {
       try {
-        const res = await axios.get(`/api/movies/find/` + item, {
+        const res = await axios.get(
+          `/api/movies/find/` + item
+          // , {
           // headers: {
           //   token:
           //     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyMDgwZDA2YjMwMmI1MjdiYjdlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NTE5NTkzOSwiZXhwIjoxNjc1NjI3OTM5fQ.7HV5FvaXt0sepK9sZOcVE_0p6DTnceLUehhna9vLJYI",
           // },
-        });
+          // }
+        );
         setMovie(res.data);
       } catch (err) {
         console.log(err);
@@ -32,14 +35,16 @@ export default function ListItem({ index, item }) {
     getMovie();
   }, [item]);
 
+  
 
   return (
     // <Link to="/watch" className="link">
     //using a object to pass movie to path and initalize path to watch
-    <Link to="/watch" state={{ movie: movie }} className="link">
+    <Link to="/watch" state={{ movie: movie }} className="link-cont">
       <div
         className="ListItem"
         style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
+        // onMouseEnter={() => hoverDelay()}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -47,28 +52,30 @@ export default function ListItem({ index, item }) {
           src="https://occ-0-1723-92.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABU7D36jL6KiLG1xI8Xg_cZK-hYQj1L8yRxbQuB0rcLCnAk8AhEK5EM83QI71bRHUm0qOYxonD88gaThgDaPu7NuUfRg.jpg?r=4ee"
          alt="" 
         /> */}
-        <img 
-        src={movie.img} alt="" />
+        <img src={movie.img} alt="" />
+
         {isHovered && (
-          <>
+          <div>
             <video src={movie.trailer} autoPlay={true} loop />
-            {/* ListItem -> Link  --> movieInfo  (Icons, itemInfoTop(duration, limit, year)desc, genre) */}
             <div className="movieInfo">
               <div className="icons">
                 <PlayArrow className="icon" />
                 <Add className="icon" />
                 <ThumbUpAltOutlined className="icon" />
-                <ThumbsUpDownOutlined className="icon" />
+                {/* <ThumbsUpDownOutlined className="icon" /> */}
               </div>
               <div className="itemInfoTop">
-                <span>{movie.duration}</span>
-                {/* <span className="limit">{movie.limit}</span> */}
-                <span>{movie.year}</span>
+                <div className="title">{movie.title}</div>
+                {/* <span>{movie.year}</span> */}
               </div>
-              <div className="genre">{movie.genre}</div>
-              <div className="desc">{movie.desc}</div>
+
+              <div className="itemInfoButton">
+                <div className="genre">{movie.genre}</div>
+                <span className="limit">{movie.limit}</span>
+                {/* <div className="desc">{movie.desc}</div> */}
+              </div>
             </div>
-          </>
+          </div>
         )}
       </div>
     </Link>

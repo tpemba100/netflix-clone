@@ -231,33 +231,30 @@
 //     "genre": "popular"
 // }];
 
-//     const headers = {
-//       'token': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyMDgwZDA2YjMwMmI1MjdiYjdlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NTE5NTkzOSwiZXhwIjoxNjc1NjI3OTM5fQ.7HV5FvaXt0sepK9sZOcVE_0p6DTnceLUehhna9vLJYI`
-//     }
+const headers = {
+  token: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyMDgwZDA2YjMwMmI1MjdiYjdlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NTE5NTkzOSwiZXhwIjoxNjc1NjI3OTM5fQ.7HV5FvaXt0sepK9sZOcVE_0p6DTnceLUehhna9vLJYI`,
+};
 
-//     const runPost = () => {
+const runPost = () => {
+  mockData.map((movie) => console.log(movie));
 
-//       mockData.map((movie)=>console.log(movie))
+  console.log("This Shit better Work");
+  mockData.map((movie) => {
+    const postData = async () => {
+      try {
+        const response = axios.put("/api/movies/x", movie, { headers });
+        // console.log(response.data);
+        console.log("This Shit Worked");
+      } catch (error) {
+        console.error(error);
+        console.log("DIDNT WOKRED");
+      }
+    };
+    postData();
+  });
+};
 
-//       console.log("This Shit better Work");
-//       mockData.map((movie)=>{
-//         const postData = async () => {
-//         try {
-//           const response = axios.post('/api/movies/x', movie, { headers });
-//           // console.log(response.data);
-//           console.log("This Shit Worked");
-
-//         } catch (error) {
-//           console.error(error);
-//           console.log("DIDNT WOKRED");
-
-//         }
-//       }
-//       postData();
-//       })
-//     }
-
-//     const handleRun = () => {
-//       runPost();
-//       console.log("Handle ran")
-//     }
+const handleRun = () => {
+  runPost();
+  console.log("Handle ran");
+};

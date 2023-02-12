@@ -24,8 +24,6 @@ export default function Featured({ type }) {
     getRandomContent();
   }, [type]);
 
-  // console.log(content)
-
   return (
     <div className="featured">
       {type && (
@@ -68,12 +66,12 @@ export default function Featured({ type }) {
         <h1>{content.title}</h1>
         <span className="desc">{content.desc}</span>
         <div className="buttons">
-          <Link to="/watch">
+        <Link to="/watch" state={{ movie: content }} className="link">
             <button className="play">
               <PlayArrow />
               <span className="play-btn">Play</span>
             </button>
-          </Link>
+        </Link>
           <button className="more">
             <InfoOutlined />
             <span>More</span>

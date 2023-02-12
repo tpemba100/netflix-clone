@@ -1,5 +1,5 @@
 .featured {
-    height: 90vh;
+    height: 85vh;
     position: relative;
 
     .category{
@@ -33,13 +33,15 @@
         width: 35%;
         position: absolute;
         left: 50px;
-        bottom: 100px;
+        bottom: 60px;
         color: white;
         display: flex;
         flex-direction: column;
 
-        img {
-            width: 600px;
+        h1 {
+            font-size: 55px;
+            text-shadow: 2px 2px 70px  #000;
+            margin: 0;
         }
 
         .desc {

@@ -6,8 +6,7 @@ import Register from "./pages/register/Register";
 import Watch from "./pages/watch/Watch";
 import { useContext } from "react";
 import { AuthContext } from "./authContext/AuthContext";
-// import axios from "axios";
-// import { useEffect } from "react";
+
 
 function App() {
   const { user } = useContext(AuthContext);

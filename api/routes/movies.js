@@ -4,16 +4,6 @@ const verify = require("../verifyToken");
 
 //  CREATE
 
-router.post("/x", async (req, res) => {
-  const newMovie = new Movie(req.body);
-
-  try {
-    const savedMovie = await newMovie.save();
-    res.status(201).json(savedMovie);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 router.post("/", verify, async (req, res) => {
   if (req.user.isAdmin) {
     const newMovie = new Movie(req.body);
@@ -31,7 +21,7 @@ router.post("/", verify, async (req, res) => {
 
 //  UPDATE
 
-router.put("/:id", verify, async (req, res) => {
+router.put("/:id", async (req, res) => {
   if (req.user.isAdmin) {
     const newMovie = new Movie(req.body);
 
