@@ -7,6 +7,8 @@ const userRoute = require("./routes/users");
 const movieRoute = require("./routes/movies");
 const listRoute = require("./routes/lists");
 
+const port = process.env.PORT || 8800;
+
 dotenv.config();
 
 mongoose.set("strictQuery", false);
@@ -26,6 +28,6 @@ app.use("/api/users", userRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
 
-app.listen(8800, () => {
-  console.log("Backend server is running!");
+app.listen(port, () => {
+  console.log(`Backend server is running in ${port}!`);
 });
