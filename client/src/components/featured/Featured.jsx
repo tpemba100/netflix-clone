@@ -17,6 +17,7 @@ export default function Featured({ type }) {
           // },
         });
         setContent(res.data[0]);
+        
       } catch (err) {
         console.log(err);
       }
