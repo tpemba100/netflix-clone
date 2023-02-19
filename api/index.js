@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
@@ -8,6 +9,12 @@ const movieRoute = require("./routes/movies");
 const listRoute = require("./routes/lists");
 
 const port = process.env.PORT || 8800;
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 dotenv.config();
 
