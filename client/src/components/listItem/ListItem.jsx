@@ -15,10 +15,12 @@ export default function ListItem({ index, item }) {
   // const trailer ="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761";
 
   useEffect(() => {
+    const url = "https://netflix-clone-api-9ydn.onrender.com";
+
     const getMovie = async () => {
       try {
         const res = await axios.get(
-          `/api/movies/find/` + item
+          url + `/api/movies/find/` + item
           // , {
           // headers: {
           //   token:

@@ -19,9 +19,11 @@ const Home = ({type}) => {
 
   useEffect(() => {
     const getRandomLists = async () => {
+      const url = "https://netflix-clone-api-9ydn.onrender.com";
+
       try {
         const res = await axios.get(
-          `/api/lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`,
+          url + `/api/lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`,
          { headers:{
               token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyMDgwZDA2YjMwMmI1MjdiYjdlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NTE5NTkzOSwiZXhwIjoxNjc1NjI3OTM5fQ.7HV5FvaXt0sepK9sZOcVE_0p6DTnceLUehhna9vLJYI"
             }
