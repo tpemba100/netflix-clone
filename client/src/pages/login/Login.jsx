@@ -31,14 +31,16 @@ export default function Login() {
                 <h1>Sign In</h1>
                 <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />
                 <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} />
-                <button 
-                    className="loginButton" onClick={handleLogin}
-                    >Sign In
-                </button>
+                <Link to="/" className="link">
+                    <button 
+                        className="loginButton" onClick={handleLogin}
+                        >Sign In
+                    </button>
+                </Link>
                 <span>
                     New to Netflix? 
                     <Link to="/register" className="link">
-                    <b>Sign up now.</b>
+                        <b>Sign up now.</b>
                     </Link>
                 </span>
                 <small>

@@ -14,18 +14,27 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={user ? <Home /> : <Navigate to="/register"/>} />
-        <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
-        <Route exact path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
+        <Route path="/" 
+        element={<Home />}
+        // element={user ? <Home /> : <Navigate to="/register"/>} 
+        />
+        <Route path="/register" 
+        element={<Register />}
+        // element={!user ? <Register /> : <Navigate to="/" />} 
+        />
+        <Route exact path="/login"
+        element={<Login />} 
+        // element={!user ? <Login /> : <Navigate to="/" />} 
+        />
 
        {/* only disply these routes when user is true */}
-        { user && (
+        {/* { user && ( */}
         <>
           <Route path="/movies" element={<Home type="movie" />} />
           <Route path="/series" element={<Home type="series" />} />
           <Route path="/watch" element={<Watch />} />
         </>
-        )}
+        {/* )} */}
       </Routes>
     </div>
   );
