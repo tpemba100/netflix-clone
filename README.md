@@ -13,7 +13,7 @@ A Front End Client View of NETFLIX app with very similar interface and experienc
 - User can hover over selection to see more details and a preview.
 - The video player is implemented with Vimeo and has most usabilty such as play/pause, full screen and options.
 
-## [Front End Live View](https://netflix-client-view.vercel.app/)
+## [Front End Live View](https://netflix-clone-front.onrender.com/)
 
 ![](client/media/netflix-mockup.gif)
 
