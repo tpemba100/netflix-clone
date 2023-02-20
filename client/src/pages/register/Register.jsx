@@ -35,10 +35,11 @@ export default function Register() {
   }, [password]);
 
   const doRegister = async () => {
+    const url = "https://netflix-clone-api-9ydn.onrender.com";
     try {
-      await axios.post("/api/auth/register", { email, username, password });
+      await axios.post(url + `/api/auth/register`, { email, username, password });
       navigate("/login");
-      console.log("SUccess Post");
+      console.log("Success Post");
     } catch (err) {
       console.log(err);
     }
