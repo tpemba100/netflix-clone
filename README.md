@@ -14,7 +14,7 @@ A NETFLIX clone app with very similar interface and experience created with MERN
 
 ## [Live View](https://netflix-clone-front.onrender.com/)
 
-![](client/media/netflix-mockup.gif)
+![](client/media/netflix.gif)
 
 ## Technologies
 
