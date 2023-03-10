@@ -16,7 +16,7 @@ A NETFLIX clone app with very similar interface and experience created with MERN
 ![](client/media/nextflix.gif)
 
 ### Walkthrough
-![caption](img/mongoDb.png)
+![caption](client/media/mongoDb.png)
 ## Technologies
 
 - React (Frontend View Framework)
