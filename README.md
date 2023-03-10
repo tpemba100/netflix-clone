@@ -1,7 +1,5 @@
 # Netflix-Clone
 
-### *In Development Phase*
-
 A NETFLIX clone app with very similar interface and experience created with MERN Stack (MongoDb, Express, React, NodeJs). The Front end was developed using React, SCSS and Material UI for similar User Experience as original Netflix. And the back end is built with NodeJs, Express, Mongoose and with MongoDB as database.
 
 ## Features
