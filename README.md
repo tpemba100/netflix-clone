@@ -15,8 +15,9 @@ A NETFLIX clone app with very similar interface and experience created with MERN
 ## [Live View](https://netflix-clone-front.onrender.com/)
 ![](client/media/nextflix.gif)
 
-### Walkthrough
+### MonogoDb Database
 ![caption](client/media/mongoDb.png)
+
 ## Technologies
 
 - React (Frontend View Framework)
