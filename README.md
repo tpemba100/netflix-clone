@@ -13,9 +13,10 @@ A NETFLIX clone app with very similar interface and experience created with MERN
 - The video player is implemented with Vimeo and has most usabilty such as play/pause, full screen and options.
 
 ## [Live View](https://netflix-clone-front.onrender.com/)
+![](client/media/nextflix.gif)
 
-![](client/media/netflix.gif)
-
+### Walkthrough
+![caption](img/mongoDb.png)
 ## Technologies
 
 - React (Frontend View Framework)
